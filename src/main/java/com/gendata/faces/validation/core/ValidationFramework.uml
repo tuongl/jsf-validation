@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="Validation Framework">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_TJEKsGobEeCITI3Am3qKGg" name="AbstractValidator">
+    <ownedOperation xmi:id="_NjndMI5OEeC0FKErD0gR_A" name="accept"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y_r_12obEeCITI3Am3qKGg" name="FieldValidator" clientDependency="_kgP49WobEeCITI3Am3qKGg">
+    <interfaceRealization xmi:id="_kgP49WobEeCITI3Am3qKGg" name="InterfaceRealization1" supplier="_TJEKsGobEeCITI3Am3qKGg" client="_Y_r_12obEeCITI3Am3qKGg" contract="_TJEKsGobEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aGdaqGobEeCITI3Am3qKGg" name="MultiFieldValidator" clientDependency="_lBeWtGobEeCITI3Am3qKGg">
+    <interfaceRealization xmi:id="_lBeWtGobEeCITI3Am3qKGg" name="InterfaceRealization1" supplier="_TJEKsGobEeCITI3Am3qKGg" client="_aGdaqGobEeCITI3Am3qKGg" contract="_TJEKsGobEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mDoXQGobEeCITI3Am3qKGg" name="ListValidator" clientDependency="_oT37lGobEeCITI3Am3qKGg">
+    <interfaceRealization xmi:id="_oT37lGobEeCITI3Am3qKGg" name="InterfaceRealization1" supplier="_TJEKsGobEeCITI3Am3qKGg" client="_mDoXQGobEeCITI3Am3qKGg" contract="_TJEKsGobEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ekOJ8GocEeCITI3Am3qKGg" name="Context Diagram">
+    <nestedClassifier xmi:type="uml:Component" xmi:id="_ouOf0mocEeCITI3Am3qKGg" name="Core Component" clientDependency="_LcWEtWodEeCITI3Am3qKGg _NgEP9GodEeCITI3Am3qKGg"/>
+    <nestedClassifier xmi:type="uml:Component" xmi:id="_p4bpImocEeCITI3Am3qKGg" name="Rule Configurator"/>
+    <nestedClassifier xmi:type="uml:Component" xmi:id="_rPdtgmocEeCITI3Am3qKGg" name="Rule Validator"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_LcWEtWodEeCITI3Am3qKGg" name="Parses" supplier="_p4bpImocEeCITI3Am3qKGg" client="_ouOf0mocEeCITI3Am3qKGg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_NgEP9GodEeCITI3Am3qKGg" name="Executes" supplier="_rPdtgmocEeCITI3Am3qKGg" client="_ouOf0mocEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Collaboration" xmi:id="_OUbaMGofEeCITI3Am3qKGg">
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_OUbaMWofEeCITI3Am3qKGg" name="Sequence Diagram">
+      <lifeline xmi:id="_eoPm8GofEeCITI3Am3qKGg" name="Phase Listener" coveredBy="_QoDeImopEeCITI3Am3qKGg _dpBaEmopEeCITI3Am3qKGg"/>
+      <lifeline xmi:id="_kmAl4mofEeCITI3Am3qKGg" name="Processor" coveredBy="_rrT0omofEeCITI3Am3qKGg _gWLj4mopEeCITI3Am3qKGg _7eDxiI8HEeCsYpnuMksyKw"/>
+      <lifeline xmi:id="_3_SHsmofEeCITI3Am3qKGg" name="Handler" coveredBy="_ltDh8mopEeCITI3Am3qKGg _wugwiI8FEeCsYpnuMksyKw _7eDxiI8HEeCsYpnuMksyKw"/>
+      <lifeline xmi:id="_ESXC4mogEeCITI3Am3qKGg" name="Rule Map" coveredBy="_1vmPVo8GEeCsYpnuMksyKw _pvljQmopEeCITI3Am3qKGg _wugwiI8FEeCsYpnuMksyKw _l_sLco8HEeCsYpnuMksyKw _mmg64o8HEeCsYpnuMksyKw _7eDxiI8HEeCsYpnuMksyKw"/>
+      <lifeline xmi:id="_xGUgQmopEeCITI3Am3qKGg" name="Constraint Strategy" coveredBy="_KaFqkmoqEeCITI3Am3qKGg _wugwiI8FEeCsYpnuMksyKw _7eDxiI8HEeCsYpnuMksyKw"/>
+      <lifeline xmi:id="_7uG-UmopEeCITI3Am3qKGg" name="Validator" coveredBy="_IA5lomoqEeCITI3Am3qKGg _wugwiI8FEeCsYpnuMksyKw _7eDxiI8HEeCsYpnuMksyKw"/>
+      <lifeline xmi:id="_N5Ud0o8GEeCsYpnuMksyKw" name="Rule Visitor" coveredBy="_1vmPVY8GEeCsYpnuMksyKw _nGLH0o8GEeCsYpnuMksyKw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1vmPVY8GEeCsYpnuMksyKw" name="MessageOccurrenceSpecification1" covered="_N5Ud0o8GEeCsYpnuMksyKw" event="_1vmPV48GEeCsYpnuMksyKw" message="_1vmPWI8GEeCsYpnuMksyKw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1vmPVo8GEeCsYpnuMksyKw" name="MessageOccurrenceSpecification2" covered="_ESXC4mogEeCITI3Am3qKGg" event="_1vmPV48GEeCsYpnuMksyKw" message="_1vmPWI8GEeCsYpnuMksyKw"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_rrT0omofEeCITI3Am3qKGg" name="BehaviorExecutionSpecification2" covered="_kmAl4mofEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_IA5lomoqEeCITI3Am3qKGg" name="BehaviorExecutionSpecification8" covered="_7uG-UmopEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_nGLH0o8GEeCsYpnuMksyKw" name="BehaviorExecutionSpecification1" covered="_N5Ud0o8GEeCsYpnuMksyKw"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_ltDh8mopEeCITI3Am3qKGg" name="BehaviorExecutionSpecification6" covered="_3_SHsmofEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_KaFqkmoqEeCITI3Am3qKGg" name="BehaviorExecutionSpecification9" covered="_xGUgQmopEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_QoDeImopEeCITI3Am3qKGg" name="BehaviorExecutionSpecification3" covered="_eoPm8GofEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_gWLj4mopEeCITI3Am3qKGg" name="BehaviorExecutionSpecification5" covered="_kmAl4mofEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_pvljQmopEeCITI3Am3qKGg" name="BehaviorExecutionSpecification7" covered="_ESXC4mogEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_dpBaEmopEeCITI3Am3qKGg" name="BehaviorExecutionSpecification4" covered="_eoPm8GofEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_l_sLco8HEeCsYpnuMksyKw" name="BehaviorExecutionSpecification10" covered="_ESXC4mogEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_mmg64o8HEeCsYpnuMksyKw" name="BehaviorExecutionSpecification11" covered="_ESXC4mogEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:CombinedFragment" xmi:id="_wugwiI8FEeCsYpnuMksyKw" name="CombinedFragment" covered="_3_SHsmofEeCITI3Am3qKGg _ESXC4mogEeCITI3Am3qKGg _xGUgQmopEeCITI3Am3qKGg _7uG-UmopEeCITI3Am3qKGg"/>
+      <fragment xmi:type="uml:CombinedFragment" xmi:id="_7eDxiI8HEeCsYpnuMksyKw" name="CombinedFragment2" covered="_kmAl4mofEeCITI3Am3qKGg _3_SHsmofEeCITI3Am3qKGg _ESXC4mogEeCITI3Am3qKGg _xGUgQmopEeCITI3Am3qKGg _7uG-UmopEeCITI3Am3qKGg">
+        <operand xmi:id="_7eDxiY8HEeCsYpnuMksyKw"/>
+      </fragment>
+      <message xmi:id="_1Qv2KGolEeCITI3Am3qKGg" name="create" messageSort="createMessage"/>
+      <message xmi:id="_RvRk6GopEeCITI3Am3qKGg" name="create" messageSort="createMessage"/>
+      <message xmi:id="_gWLj62opEeCITI3Am3qKGg" name="handleRequest"/>
+      <message xmi:id="_ltDh-2opEeCITI3Am3qKGg" name="handleRequest"/>
+      <message xmi:id="_pvljS2opEeCITI3Am3qKGg" name="process"/>
+      <message xmi:id="_19JsWGopEeCITI3Am3qKGg" name="create" messageSort="createMessage"/>
+      <message xmi:id="_9tqbSGopEeCITI3Am3qKGg" name="create" messageSort="createMessage"/>
+      <message xmi:id="_IA5lq2oqEeCITI3Am3qKGg" name="accept"/>
+      <message xmi:id="_KaFqm2oqEeCITI3Am3qKGg" name="apply"/>
+      <message xmi:id="_MslRqGoqEeCITI3Am3qKGg" name="validationMessages" messageSort="reply"/>
+      <message xmi:id="_OLNLyGoqEeCITI3Am3qKGg" name="validationMessages" messageSort="reply"/>
+      <message xmi:id="_SGv0SGoqEeCITI3Am3qKGg" name="success/failure" messageSort="reply"/>
+      <message xmi:id="_U1_owmoqEeCITI3Am3qKGg" name="success/failure" messageSort="reply"/>
+      <message xmi:id="_bvMmUmpYEeCITI3Am3qKGg" name="validate"/>
+      <message xmi:id="_1vmPWI8GEeCsYpnuMksyKw" name="create" messageSort="createMessage" receiveEvent="_1vmPVo8GEeCsYpnuMksyKw" sendEvent="_1vmPVY8GEeCsYpnuMksyKw"/>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_atyHGGogEeCITI3Am3qKGg" name="ValidationPhaseListener"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qj0LoGogEeCITI3Am3qKGg" name="ValidationLevelProcessor" clientDependency="_eVQupGohEeCITI3Am3qKGg">
+    <interfaceRealization xmi:id="_eVQupGohEeCITI3Am3qKGg" name="InterfaceRealization1" supplier="_7mb_IGogEeCITI3Am3qKGg" client="_qj0LoGogEeCITI3Am3qKGg" contract="_7mb_IGogEeCITI3Am3qKGg"/>
+    <ownedOperation xmi:id="_azfO0I6xEeC_EZe0gbudpQ" name="addHandler"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_7mb_IGogEeCITI3Am3qKGg" name="AbstractValidationLevelHandler">
+    <ownedOperation xmi:id="_2PqOgI5NEeC0FKErD0gR_A" name="handleRequest">
+      <ownedParameter xmi:id="_36c8YI5NEeC0FKErD0gR_A" name="return" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ExGX6GohEeCITI3Am3qKGg" name="RuleMap">
+    <ownedAttribute xmi:id="_W93F4I5VEeC0FKErD0gR_A" name="rules" type="_GhA2WGohEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_al5jkI5VEeC0FKErD0gR_A" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_puEWMI5NEeC0FKErD0gR_A" name="process">
+      <ownedParameter xmi:id="_rMrpQI5NEeC0FKErD0gR_A" name="return" type="_7OkCYI5WEeC0FKErD0gR_A" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A2rhcI5XEeC0FKErD0gR_A" value="*"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_OpcYoI5VEeC0FKErD0gR_A" name="phaseId" type="_0mZbkI5WEeC0FKErD0gR_A"/>
+      <ownedParameter xmi:id="_CsXioI5VEeC0FKErD0gR_A" name="validationLevel" type="_m8RN4I5WEeC0FKErD0gR_A"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GhA2WGohEeCITI3Am3qKGg" name="Rule">
+    <ownedAttribute xmi:id="_ifcqII9PEeC5Ob9s-WbMdA" name="validationLevel" type="_bVKNsI9PEeC5Ob9s-WbMdA"/>
+    <ownedAttribute xmi:id="_lKqTMI9PEeC5Ob9s-WbMdA" name="ruleName" type="_bVKNsI9PEeC5Ob9s-WbMdA"/>
+    <ownedAttribute xmi:id="_tR2cwI9PEeC5Ob9s-WbMdA" name="ruleParameters"/>
+    <ownedAttribute xmi:id="_Q7uUsI9PEeC5Ob9s-WbMdA" name="clientId" type="_bVKNsI9PEeC5Ob9s-WbMdA"/>
+    <ownedAttribute xmi:id="_yWeNMI9PEeC5Ob9s-WbMdA" name="forId" type="_bVKNsI9PEeC5Ob9s-WbMdA"/>
+    <ownedAttribute xmi:id="_H5Mu0I9QEeC5Ob9s-WbMdA" name="validateOnRender" type="_EiLIoI9QEeC5Ob9s-WbMdA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dGbkDGohEeCITI3Am3qKGg" name="A_&lt;validationPhaseListener>_&lt;validationProcessor>" memberEnd="_dGbkDWohEeCITI3Am3qKGg _dGbkEGohEeCITI3Am3qKGg">
+    <ownedEnd xmi:id="_dGbkDWohEeCITI3Am3qKGg" name="validationPhaseListener" type="_atyHGGogEeCITI3Am3qKGg" association="_dGbkDGohEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dGbkDmohEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dGbkD2ohEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_dGbkEGohEeCITI3Am3qKGg" name="validationProcessor" type="_qj0LoGogEeCITI3Am3qKGg" association="_dGbkDGohEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dGbkEWohEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dGbkEmohEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hojra2ohEeCITI3Am3qKGg" name="A_&lt;validationPhaseListener>_&lt;ruleMap>" memberEnd="_hojrbGohEeCITI3Am3qKGg _hojrb2ohEeCITI3Am3qKGg">
+    <ownedEnd xmi:id="_hojrbGohEeCITI3Am3qKGg" name="componentRuleVisitor" type="_ujZ00I5KEeC0FKErD0gR_A" association="_hojra2ohEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hojrbWohEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hojrbmohEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_hojrb2ohEeCITI3Am3qKGg" name="ruleMap" type="_ExGX6GohEeCITI3Am3qKGg" association="_hojra2ohEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hojrcGohEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hojrcWohEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BtzJi2oiEeCITI3Am3qKGg" name="A_&lt;rule>_&lt;ruleMap>" memberEnd="_BtzJjGoiEeCITI3Am3qKGg _BtzJj2oiEeCITI3Am3qKGg">
+    <ownedEnd xmi:id="_BtzJjGoiEeCITI3Am3qKGg" name="rule" type="_GhA2WGohEeCITI3Am3qKGg" aggregation="composite" association="_BtzJi2oiEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BtzJjWoiEeCITI3Am3qKGg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BtzJjmoiEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_BtzJj2oiEeCITI3Am3qKGg" name="ruleMap" type="_ExGX6GohEeCITI3Am3qKGg" association="_BtzJi2oiEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BtzJkGoiEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BtzJkWoiEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ffzZuGoiEeCITI3Am3qKGg" name="AbstractConstraintStrategy">
+    <ownedAttribute xmi:id="_2r8XUI5MEeC0FKErD0gR_A" name="rule" visibility="private" type="_GhA2WGohEeCITI3Am3qKGg"/>
+    <ownedAttribute xmi:id="_yd96AI5XEeC0FKErD0gR_A" name="component" type="_tL7_sI5XEeC0FKErD0gR_A"/>
+    <ownedOperation xmi:id="_F8U7sI5OEeC0FKErD0gR_A" name="apply">
+      <ownedParameter xmi:id="_H3pY4I5OEeC0FKErD0gR_A" name="return" type="_7OkCYI5WEeC0FKErD0gR_A" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UkskMI5XEeC0FKErD0gR_A" value="*"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_udJa0I5VEeC0FKErD0gR_A" name="fieldValidator" type="_Y_r_12obEeCITI3Am3qKGg"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1B8kkI5VEeC0FKErD0gR_A" name="apply">
+      <ownedParameter xmi:id="_3ba9YI5VEeC0FKErD0gR_A" name="return" type="_7OkCYI5WEeC0FKErD0gR_A" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YmTYcI5XEeC0FKErD0gR_A" value="*"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_8lGM8I5VEeC0FKErD0gR_A" name="multiFieldValidator" type="_aGdaqGobEeCITI3Am3qKGg"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_MOKMgI5WEeC0FKErD0gR_A" name="apply">
+      <ownedParameter xmi:id="_NXOtYI5WEeC0FKErD0gR_A" name="return" type="_7OkCYI5WEeC0FKErD0gR_A" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bkpY4I5XEeC0FKErD0gR_A" value="*"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_QE9e8I5WEeC0FKErD0gR_A" name="listValidator" type="_mDoXQGobEeCITI3Am3qKGg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tC8ZK2ojEeCITI3Am3qKGg" name="A_&lt;abstractConstraintStrategy>_&lt;rule>" memberEnd="_tC8ZLGojEeCITI3Am3qKGg _tC8ZL2ojEeCITI3Am3qKGg">
+    <ownedEnd xmi:id="_tC8ZLGojEeCITI3Am3qKGg" name="abstractConstraintStrategy" type="_ffzZuGoiEeCITI3Am3qKGg" association="_tC8ZK2ojEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tC8ZLWojEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tC8ZLmojEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_tC8ZL2ojEeCITI3Am3qKGg" name="ruleMap" type="_ExGX6GohEeCITI3Am3qKGg" association="_tC8ZK2ojEeCITI3Am3qKGg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tC8ZMGojEeCITI3Am3qKGg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tC8ZMWojEeCITI3Am3qKGg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_muoQh2olEeCITI3Am3qKGg" name="CreationEvent1"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_1Qv2J2olEeCITI3Am3qKGg" name="CreationEvent2"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_keinx2omEeCITI3Am3qKGg" name="CreationEvent3"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_RvRk52opEeCITI3Am3qKGg" name="CreationEvent4"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_gWLj6mopEeCITI3Am3qKGg" name="CallEvent3"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_ltDh-mopEeCITI3Am3qKGg" name="CallEvent4"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_pvljSmopEeCITI3Am3qKGg" name="CallEvent5"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_19JsV2opEeCITI3Am3qKGg" name="CreationEvent5"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_9tqbR2opEeCITI3Am3qKGg" name="CreationEvent6"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_IA5lqmoqEeCITI3Am3qKGg" name="CallEvent6"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_KaFqmmoqEeCITI3Am3qKGg" name="CallEvent7"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_LXCbAmoqEeCITI3Am3qKGg" name="CallEvent8"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_MslRp2oqEeCITI3Am3qKGg" name="CallEvent9"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_OLNLx2oqEeCITI3Am3qKGg" name="CallEvent10"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_SGv0R2oqEeCITI3Am3qKGg" name="CallEvent11"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_U1_owWoqEeCITI3Am3qKGg" name="CallEvent12"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2pkmGGosEeCITI3Am3qKGg" name="ValidationLevelHandler" clientDependency="_5klltGosEeCITI3Am3qKGg">
+    <interfaceRealization xmi:id="_5klltGosEeCITI3Am3qKGg" name="InterfaceRealization1" supplier="_7mb_IGogEeCITI3Am3qKGg" client="_2pkmGGosEeCITI3Am3qKGg" contract="_7mb_IGogEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AGkE-GotEeCITI3Am3qKGg" name="GlobalConstraintStrategy">
+    <generalization xmi:id="_KR5Qg2otEeCITI3Am3qKGg" general="_ffzZuGoiEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_D_al2GotEeCITI3Am3qKGg" name="FieldConstraintStrategy">
+    <generalization xmi:id="_K5FMVGotEeCITI3Am3qKGg" general="_ffzZuGoiEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Fk4u2GotEeCITI3Am3qKGg" name="FormConstraintStrategy">
+    <generalization xmi:id="_LZ3lNGotEeCITI3Am3qKGg" general="_ffzZuGoiEeCITI3Am3qKGg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_bvMmUWpYEeCITI3Am3qKGg" name="CallEvent13"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ujZ00I5KEeC0FKErD0gR_A" name="ComponentRuleVisitor">
+    <ownedAttribute xmi:id="_yn-yoI5MEeC0FKErD0gR_A" name="ruleMap" visibility="private" type="_ExGX6GohEeCITI3Am3qKGg"/>
+    <ownedOperation xmi:id="_jOK6kI5NEeC0FKErD0gR_A" name="visitComponent"/>
+    <ownedOperation xmi:id="_nfx5sI5NEeC0FKErD0gR_A" name="leaveContainer"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Kg1r4I5SEeC0FKErD0gR_A" name="CallEvent1"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_hKxwYI5WEeC0FKErD0gR_A" name="String"/>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_m8RN4I5WEeC0FKErD0gR_A" name="ValidationLevelEnum"/>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_0mZbkI5WEeC0FKErD0gR_A" name="PhaseId"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7OkCYI5WEeC0FKErD0gR_A" name="ValidationMessage"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jqQ1II5XEeC0FKErD0gR_A" name="UIValidator">
+    <generalization xmi:id="_vFErk45XEeC0FKErD0gR_A" general="_tL7_sI5XEeC0FKErD0gR_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tL7_sI5XEeC0FKErD0gR_A" name="UIComponent"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_fa7TYo8GEeCsYpnuMksyKw" name="CreationEvent7"/>
+  <packagedElement xmi:type="uml:CreationEvent" xmi:id="_1vmPV48GEeCsYpnuMksyKw" name="CreationEvent8"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_bVKNsI9PEeC5Ob9s-WbMdA" name="String"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_EiLIoI9QEeC5Ob9s-WbMdA" name="boolean"/>
+</uml:Model>
